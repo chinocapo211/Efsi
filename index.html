@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TODOs</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <script src="java.js"></script>
+  <div class="container">
+    <form>
+      <label for="proyectoIngreso">Ingresa tu proyecto:</label><br>
+      <input type="text" id="proyectoIngreso" name="proyectoIngreso" required><br><br>
+      <label for="descripcionIngreso">Ingresa la descripcion:</label><br>
+      <input type="text" id="descripcionIngreso" name="descripcionIngreso"><br><br>
+      <div>
+          <button type="button" onclick="agregarProyecto()">Agregar proyecto</button>
+      </div>
+  </div>
+  <div class="container">
+    <form>
+      <label for="tareaIngreso">Ingresa tu tarea:</label><br>
+      <input type="text" id="tareaIngreso" name="tareaIngreso" required><br><br>
+      <label for="nombrePr">Ingresa el nombre del proyecto:</label><br>
+      <input type="text" id="nombrePr" name="nombrePr"><br><br>
+      <label for="descripcionTarea">Ingresa la descripcion de la tarea:</label><br>
+      <input type="text" id="descripcionTarea" name="descripcionTarea"><br><br>
+      <label for="fechavenTarea">Ingresa la descripcion de la tarea:</label><br>
+      <input type="date" id="fechavenTarea" name="fechavenTarea"><br><br>
+      <div>
+          <button type="button" onclick="agregarTareaPr()">Agregar tarea</button>
+      </div>
+  </div>
+  <div class="container">
+    <form>
+      <label for="nombreProyecto">Ingresa el nombre del proyecto:</label><br>
+      <input type="text" id="nombreProyecto" name="nombreProyecto" required><br><br>
+      <div>
+          <button type="button" onclick="mostrarTareasDeProyecto()">Mostrar tareas</button>
+      </div>
+  </div>
+  <div>
+    <form>
+      <label for="nombreProy">Ingresa el nombre del proyecto</label><br>
+      <input type="text" id="nombreProy" name="nombreProy" required><br><br>
+      <label for="fechaVen">Ingresa la fecha de vencimiento de la/s tarea/s</label><br>
+      <input type="date" id="fechaVen" name="fechaVen" required><br><br>
+      <div>
+        <button type="button" onclick="buscarPorFecha()">Buscar tareas por fecha de vencimiento</button>
+      </div>
+  </div>
+  <button type="button" onclick="mostrarProyectos()">Mostrar proyectos</button>
+  <div id="proyectos"></div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif; 
+  }
+  
+  .container {
+    margin-bottom: 20px;
+  }
+  
+  input[type="text"], input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    box-sizing: border-box;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  .proyecto {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .proyecto h2 {
+    margin-bottom: 5px;
+  }
+  
+  .tarea {
+    margin-left: 20px;
+    font-size: 18px; /* Cambia el tamaño de la fuente para las tareas */
+  }
+  
+  .tarea span {
+    margin-left: 5px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin: 5px 0;
+  }
+  
