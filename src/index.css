@@ -93,16 +93,20 @@ code {
   display: flex;
   justify-content: center;
   animation: fadeInDown 1s;
+  z-index: 9999;
 }
 
 .fixed {
   position: sticky;
   top: 0;
+  z-index: 9999;
 }
 
 .navbar {
   width: 100%; 
   text-align: center;
+  z-index: 9999;
+  
 }
 
 .navbar ul {
@@ -146,10 +150,10 @@ code {
 }
 #container3{
   margin-top: 150px;
-  margin-left: 25%;
-  width: 1000px;
+  width: 100%;
   justify-content: center;
   text-align: center;
+  z-index: 1;
 }
 #container3 img{
   width: 250px;
@@ -158,6 +162,7 @@ code {
   padding: 0;
   margin: 0;
   display: flex;
+  z-index: 1;
 }
 #container3 p{
   margin:0;
@@ -166,7 +171,7 @@ code {
 
 .flex{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .hoverr:hover{
   opacity: 0;
@@ -207,19 +212,49 @@ code {
 #lugar{
   opacity: 0;
 }
-#container4{
+#container4 {
   width: 100%;
   text-align: center;
   margin-top: 250px;
 }
-#container4 img{
+
+.card {
+  width: 150px;
+  height: 150px;
+  perspective: 1000px; /* Agrega perspectiva para el efecto 3D */
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.8s; /* Transición suave para la rotación */
+  transform-style: preserve-3d; /* Mantiene los elementos hijos en 3D */
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg); /* Gira la tarjeta hacia atrás en el hover */
+}
+
+.card-front,
+.card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden; /* Oculta el lado posterior durante la rotación */
+}
+
+.card-back {
+  transform: rotateY(180deg); /* Muestra inicialmente el lado posterior */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.card-back h3 {
   margin: 0;
   padding: 0;
-  width: 150px;
-  border-radius: 15px;
-}
-#conta{
-  border: 5px solid #464646;
-  border-radius: 15px;
-  width: 150px;
+  width: 100%;
+  margin-bottom: 30px;
 }
